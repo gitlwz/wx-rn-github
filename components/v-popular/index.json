@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-tab": "/dist/tab/index",
+        "van-tabs": "/dist/tabs/index",
+        "v-popular-item": "../v-popular-item/index"
+    }
+}

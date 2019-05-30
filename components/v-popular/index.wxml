@@ -1,0 +1,8 @@
+<!-- index.wxml -->
+<view class="container">
+    <van-tabs  color="#2196F3" bind:change="onChange">
+        <van-tab wx:for="{{tabs}}" title="{{item}}" wx:key="{{item}}">
+            <v-popular-item wx:if="{{ titles[index] }}" name="{{item}}" windowHeight="{{systemInfo.windowHeight - 44}}" />
+        </van-tab>
+    </van-tabs>
+</view>

@@ -1,0 +1,4 @@
+<!-- index.wxml -->
+<view class="container">
+    <v-popular tabs="{{tabs}}" />
+</view>

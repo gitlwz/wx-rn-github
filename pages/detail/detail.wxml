@@ -1,0 +1,4 @@
+<!-- pages/detail/detail.wxml -->
+<view class="container">
+    <web-view src="{{url}}" />
+</view>

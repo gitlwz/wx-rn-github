@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/popular/popular",
+    "pages/logs/logs",
+    "pages/trending/trending",
+    "pages/favorite/favorite",
+    "pages/my/my",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2196F3",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "selectedIconPath": "/images/tab/zuire@highlight.png",
+        "pagePath": "pages/popular/popular",
+        "iconPath": "/images/tab/zuire.png",
+        "text": "最热"
+      },
+      {
+        "pagePath": "pages/trending/trending",
+        "selectedIconPath": "/images/tab/qushi@highlight.png",
+        "iconPath": "/images/tab/qushi.png",
+        "text": "趋势"
+      },
+      {
+        "pagePath": "pages/favorite/favorite",
+        "selectedIconPath": "/images/tab/shoucang@highlight.png",
+        "iconPath": "/images/tab/shoucang.png",
+        "text": "收藏"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "/images/tab/mine-gray@highlight.png",
+        "iconPath": "/images/tab/mine-gray.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

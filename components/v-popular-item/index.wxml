@@ -1,0 +1,19 @@
+<scroll-view class="container" scroll-y  style="height: {{ windowHeight }}px;">
+    <view wx:for="{{items}}" wx:key="{{item.id}}" class="item" bind:tap="onTap" data-item="{{item}}" >
+        <view class="full_name">{{item.full_name}}</view>
+        <view class="description">{{item.description}}</view>
+        <view class="row">
+            <view class="row">
+                <text>Author:</text>
+                <image class="row-img" src="{{item.owner.avatar_url}}"></image>
+            </view>
+            <view>
+                <text>Start:</text>
+                <text>{{item.stargazers_count}}</text>
+            </view>
+            <view>
+                <van-icon name="star-o" size="2em"/>
+            </view>
+        </view>
+    </view>
+</scroll-view>

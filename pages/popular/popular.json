@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "v-popular": "/components/v-popular/index"
+    },
+    "disableScroll": true,
+    "navigationBarTitleText": "最热",
+    "navigationBarTextStyle": "white"
+}
