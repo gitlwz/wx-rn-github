@@ -1,4 +1,4 @@
 <!-- index.wxml -->
 <view class="container">
-    <v-favorite tabs="{{tabs}}" />
+    <v-favorite style="height:100%" tabs="{{tabs}}" />
 </view>
