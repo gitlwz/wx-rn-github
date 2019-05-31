@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+    "usingComponents": {
+        "v-trending": "/components/v-trending/index"
+    },
+    "disableScroll": true,
+    "navigationBarTitleText": "趋势",
+    "navigationBarTextStyle": "white"
 }

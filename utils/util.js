@@ -35,9 +35,29 @@ const getSystemInfo = _this => {
         })
     }
 }
+const handlData = (starKey, datas) => {
+    return new Promise((resolve, reject) => {
+        wx.getStorage({
+            key: starKey,
+            success: (res) => {
+                let starDatas = res.data || [];
+                datas.forEach((ele) => {
+                    if (starDatas.find((_i) => _i.id === ele.id)) {
+                        ele.star = true;
+                    }
+                })
+                resolve(datas)
+            },
+            fail: (res) => {
+                resolve(datas)
+            }
+        })
+    })
+}
 
 export {
     formatTime,
-    getSystemInfo
+    getSystemInfo,
+    handlData
 }
 

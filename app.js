@@ -1,9 +1,11 @@
 //app.js
+import pubsub from "./utils/pubsub"
 App({
-    onLaunch: function (a,b) {
+    onLaunch: function (a, b) {
     },
     globalData: {
         userInfo: null,
-        theme:"#2196F3"
+        pubsub: pubsub,
+        theme: "#2196F3"
     }
 })

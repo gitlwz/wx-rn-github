@@ -1,6 +1,6 @@
 // components/v-popular/index.js
 import { getSystemInfo } from "../../utils/util";
-const KEY = "popular"
+const KEY = "trending"
 Component({
     /**
      * 组件的属性列表

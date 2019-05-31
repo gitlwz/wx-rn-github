@@ -1,11 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const { pubsub } = app.globalData;
 Page({
     data: {
         //,"JavaScript","IOS","Android","React Native"
-        tabs:["Java","JavaScript","IOS","Android","React Native"],
+        tabs: ["Java", "JavaScript", "IOS", "Android", "React Native"],
         // motto: 'Hello World',
         // userInfo: {},
         // hasUserInfo: false,
@@ -18,6 +18,9 @@ Page({
     //     })
     //   },
     onLoad: function () {
+    },
+    onTabItemTap(item) {
+        pubsub.publish("tab.select",item.index)
     },
     //   getUserInfo: function(e) {
     //     console.log(e)

@@ -1,16 +1,16 @@
 
-import { HTTP } from "../utils/http";
+import { HTTP, TrandingGh } from "../utils/http";
 import { handlData } from "../utils/util"
 import { getStorage, setStorage } from "../utils/storage"
-const URL = 'https://api.github.com/search/repositories?q=';
-const QUERY_STR = '&sort=stars';
-export const KEY = "popular";
-export default class PopularModel {
+const URL = 'https://github.com/trending/';
+const QUERY_STR = '?since=monthly';
+export const KEY = "trending";
+export default class TrendingModel {
     constructor(key) {
         this.key = key;
         this.starKey = key + "star"
     }
-    onRefreshPopular(key) {
+    onRefreshTrending(key) {
         let url = URL + key + QUERY_STR;
         let storageKey = KEY + key;
         return new Promise((resolve, reject) => {
@@ -20,17 +20,17 @@ export default class PopularModel {
                         handlData(this.starKey, data)
                             .then(resolve)
                     } else {
-                        HTTP.request({ url })
+                        TrandingGh.fetchTrending(url)
                             .then((res) => {
-                                if (res.data && res.data.items) {
-                                    let datas = res.data.items.map((ele) => {
+                                if (res && res.length !== 0) {
+                                    let datas = res.map((ele) => {
                                         return {
-                                            avatar_url: ele.owner.avatar_url,
-                                            count: ele.stargazers_count,
-                                            url: ele.html_url,
-                                            name: ele.full_name,
-                                            description: ele.description,
-                                            id: ele.id
+                                            avatar_url: ele.contributors[0],
+                                            count: ele.forkCount,
+                                            url: ele.url,
+                                            name: ele.fullName,
+                                            description: ele.description.replace(/(<g-emoji.*">)|(<\/g-emoji>)|(<a.*<\/a>)|(<img.*>)/g,""),
+                                            id: ele.fullName
                                         }
                                     })
                                     setStorage(storageKey, datas)

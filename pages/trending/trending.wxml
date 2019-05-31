@@ -1,2 +1,4 @@
-<!--pages/trending/trending.wxml-->
-<text>pages/trending/trending.wxml</text>
+<!-- index.wxml -->
+<view class="container">
+    <v-trending tabs="{{tabs}}" />
+</view>
