@@ -1,2 +1,4 @@
-<!--pages/favorite/favorite.wxml-->
-<text>pages/favorite/favorite.wxml</text>
+<!-- index.wxml -->
+<view class="container">
+    <v-favorite tabs="{{tabs}}" />
+</view>

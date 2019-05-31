@@ -1,1 +1,12 @@
-/* pages/favorite/favorite.wxss */
+/**index.wxss**/
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}

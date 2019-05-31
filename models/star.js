@@ -33,6 +33,20 @@ export default class Star {
             }
         })
     }
+    onGetStar() {
+        return new Promise((resolve, reject) => {
+            wx.getStorage({
+                key: this.storageKey,
+                success: (res) => {
+                    let datas = res.data || [];
+                    resolve(datas)
+                },
+                fail: (res) => {
+                    resolve([])
+                }
+            })
+        })
+    }
     setStorage(items) {
         wx.setStorage({
             key: this.storageKey,

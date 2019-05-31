@@ -20,7 +20,7 @@ Page({
     onLoad: function () {
     },
     onTabItemTap(item) {
-        pubsub.publish("tab.select",item.index)
+        pubsub.publish("tab.popular",item.index)
     },
     //   getUserInfo: function(e) {
     //     console.log(e)
