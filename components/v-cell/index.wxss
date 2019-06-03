@@ -1,18 +1,18 @@
-/* pages/my/my.wxss */
-
-.top-cell {
+/* components/v-cell/index.wxss */
+.container {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    height: 160rpx;
+    height: 100rpx;
     padding: 0 28rpx;
     position: relative;
     box-sizing: border-box;
+    font-size: 28rpx;
 }
 
-.top-cell:active {
+.container:active {
     background-color: #f2f3f5;
 }
 
@@ -23,8 +23,8 @@
 
 .left-img {
     margin-right: 14rpx;
-    width: 80rpx;
-    height: 80rpx;
+    width: 40rpx;
+    height: 40rpx;
 }
 
 .right {
@@ -41,16 +41,4 @@
     left: 14rpx;
     right: 14rpx;
     border-bottom: 0.5px solid #cecece;
-}
-
-.btn {
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.title {
-    font-size: 28rpx;
-    background-color: #f2f3f5;
-    color: gray;
-    padding: 20rpx;
 }

@@ -1,9 +1,5 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  box-sizing: border-box;
-} 
+ 
 page{
   height: 100%;
 }

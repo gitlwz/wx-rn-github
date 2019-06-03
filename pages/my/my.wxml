@@ -1,2 +1,31 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!-- pages/my/my.wxml -->
+<view class="container">
+    <view class="top-cell line">
+        <block wx:if="{{isUserInfo}}">
+            <view class="about-left">
+                <open-data class="left-img" type="userAvatarUrl"></open-data>
+                <text>{{userInfo.nickName}}</text>
+            </view>
+            <image class="right" src="../../images/img/right.png"></image>
+        </block>
+        <block wx:if="{{!isUserInfo}}">
+            <view class="about-left">
+                <image class="left-img" src="../../images/img/user-fill.png"></image>
+                <button class="btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+                    授权登录
+                </button>
+            </view>
+            <image class="right" src="../../images/img/right.png"></image>
+        </block>
+    </view>
+    <v-cell showLine="{{fale}}" data="{{MORE_MENU.Tutorial}}" />
+    <view class="title">趋势管理</view>
+    <v-cell showLine="{{fale}}" data="{{MORE_MENU.Custom_Language}}" />
+    <view class="title">最热管理</view>
+    <v-cell data="{{MORE_MENU.Custom_Key}}" />
+    <v-cell showLine="{{fale}}" data="{{MORE_MENU.Remove_Key}}" />
+    <view class="title">设置</view>
+    <v-cell data="{{MORE_MENU.Custom_Theme}}" />
+    <v-cell data="{{MORE_MENU.About_Author}}" />
+    <v-cell showLine="{{fale}}" data="{{MORE_MENU.Feedback}}" />
+</view>

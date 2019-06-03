@@ -1,0 +1,7 @@
+<view class="container {{showLine?'line':''}}" bind:tap="onTab">
+    <view class="about-left">
+        <image class="left-img" src="../../images/img/{{data.icon}}.png"></image>
+        <text class="left-text">{{data.name}}</text>
+    </view>
+    <image class="right" src="../../images/img/right.png"></image>
+</view>

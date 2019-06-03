@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+    "usingComponents": {
+        "v-cell": "/components/v-cell/index",
+        "van-popup": "/dist/popup/index"
+    },
+    "disableScroll": true,
+    "navigationBarTitleText": "我的",
+    "navigationBarTextStyle": "white"
 }
